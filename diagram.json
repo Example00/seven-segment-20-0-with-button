@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-7segment",
+      "id": "sevseg1",
+      "top": -206.22,
+      "left": 33.88,
+      "attrs": { "common": "cathode" }
+    },
+    {
+      "type": "wokwi-7segment",
+      "id": "sevseg2",
+      "top": -206.22,
+      "left": 81.88,
+      "attrs": { "common": "cathode" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 284.6,
+      "left": 182.4,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 282.35,
+      "left": 288,
+      "attrs": { "value": "10000" }
+    }
+  ],
+  "connections": [
+    [ "sevseg1:A", "uno:2", "yellow", [ "v-37.56", "h172.8" ] ],
+    [ "sevseg1:C", "uno:4", "violet", [ "v96", "h134.4" ] ],
+    [ "sevseg1:D", "uno:5", "#8f4814", [ "v124.8", "h144" ] ],
+    [ "sevseg1:E", "uno:6", "gold", [ "v115.2", "h153.6" ] ],
+    [ "sevseg2:E", "uno:13", "blue", [ "v38.4", "h28.8" ] ],
+    [ "sevseg2:D", "uno:12", "orange", [ "v28.8", "h38.4" ] ],
+    [ "sevseg2:C", "uno:11", "green", [ "v19.2", "h28.8" ] ],
+    [ "sevseg2:B", "uno:10", "white", [ "v-8.76", "h38.4" ] ],
+    [ "sevseg2:A", "uno:9", "purple", [ "v-18.36", "h48" ] ],
+    [ "sevseg1:F", "uno:7", "gray", [ "v-95.16", "h115.2" ] ],
+    [ "sevseg1:G", "uno:8", "magenta", [ "v-143.16", "h115.2" ] ],
+    [ "sevseg2:COM.1", "uno:GND.1", "black", [ "h0", "v76.8", "h9.6" ] ],
+    [ "sevseg2:F", "uno:A0", "green", [ "v-47.16", "h240", "v460.8", "h-124.8" ] ],
+    [ "sevseg2:G", "uno:A1", "cyan", [ "v-104.76", "h211.2", "v537.6", "h-76.8" ] ],
+    [ "sevseg1:B", "uno:3", "green", [ "v-75.96", "h153.6" ] ],
+    [ "btn1:2.r", "uno:5V", "red", [ "h19.4", "v38.6", "h-115.2" ] ],
+    [ "btn1:1.r", "r1:1", "black", [ "v0" ] ],
+    [ "r1:2", "uno:GND.3", "black", [ "v-48", "h-154.8" ] ],
+    [ "sevseg1:COM.1", "uno:GND.2", "blue", [ "h0", "v86.4", "h-67.2", "v288", "h182.4" ] ],
+    [ "btn1:1.l", "uno:A2", "gray", [ "h-48", "v-76.8", "h96" ] ],
+    [ "btn1:2.l", "uno:5V", "red", [ "h-19.2", "v0.2" ] ]
+  ],
+  "dependencies": {}
+}
